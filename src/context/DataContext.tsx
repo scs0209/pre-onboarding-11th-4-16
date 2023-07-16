@@ -1,6 +1,7 @@
-import { createContext, FC, ReactNode, useContext, useEffect, useState } from 'react';
+import { createContext, FC, ReactNode, useContext, useEffect, useRef, useState } from 'react';
 
 import searchData from '@/api';
+import { debounce } from '@/utils/debounce';
 
 interface Props {
   children: ReactNode;
@@ -29,16 +30,20 @@ export const DataProvider: FC<Props> = ({ children }) => {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [query, setQuery] = useState<string>('');
 
-  useEffect(() => {
-    if (query.trim() !== '') {
-      (async () => {
+  const debouncedSearchData = useRef(
+    debounce(async (query: string) => {
+      if (query.trim() !== '') {
         const data = await searchData(query);
 
         setSuggestions(data);
-      })();
-    } else {
-      setSuggestions([]);
-    }
+      } else {
+        setSuggestions([]);
+      }
+    }, 300),
+  ).current;
+
+  useEffect(() => {
+    debouncedSearchData(query);
   }, [query]);
 
   return (
