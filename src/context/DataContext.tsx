@@ -9,6 +9,8 @@ interface Props {
 interface DataContextProps {
   suggestions: string[];
   setSuggestions: (suggestions: string[]) => void;
+  query: string;
+  setQuery: (query: string) => void;
 }
 
 export const DataContext = createContext<DataContextProps | null>(null);
@@ -40,6 +42,8 @@ export const DataProvider: FC<Props> = ({ children }) => {
   }, [query]);
 
   return (
-    <DataContext.Provider value={{ suggestions, setSuggestions }}>{children}</DataContext.Provider>
+    <DataContext.Provider value={{ suggestions, setSuggestions, query, setQuery }}>
+      {children}
+    </DataContext.Provider>
   );
 };
