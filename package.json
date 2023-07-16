@@ -14,6 +14,7 @@
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "axios": "^1.4.0",
+    "lint-staged": "^13.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.1",
@@ -30,6 +31,18 @@
     "format": "prettier --cache --write .",
     "lint": "eslint --cache .",
     "lints": "eslint --fix \"src/**/*.{js,ts,jsx,tsx}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --cache --fix",
+      "prettier --cache --write .",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": [
