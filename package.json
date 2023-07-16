@@ -30,7 +30,7 @@
     "postinstall": "husky install",
     "format": "prettier --cache --write .",
     "lint": "eslint --cache .",
-    "lints": "eslint --fix \"src/**/*.{js,ts,jsx,tsx}\"",
+    "fix": "eslint --fix \"src/**/*.{js,ts,jsx,tsx}\"",
     "prepare": "husky install"
   },
   "husky": {

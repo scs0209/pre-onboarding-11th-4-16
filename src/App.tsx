@@ -1,7 +1,18 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import SearchBar from '@/components/SearchBar/SearchBar';
+
+import { DataProvider } from './context/DataContext';
 
 function App() {
-  return <div className="App">Home</div>;
+  return (
+    <DataProvider>
+      <Routes>
+        <Route path="/" element={<SearchBar />} />
+      </Routes>
+    </DataProvider>
+  );
 }
 
 export default App;
