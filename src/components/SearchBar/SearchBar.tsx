@@ -1,12 +1,14 @@
-import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useRef } from 'react';
 
 import { useDataContext } from '@/context/DataContext';
+import { useKeyNavigation } from '@/hooks/useKeyNavigation';
 
 const SearchBar = () => {
   const { suggestions, query, setQuery } = useDataContext();
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+
   const suggestionContainerRef = useRef<HTMLUListElement>(null);
   const suggestionItemRefs = useRef<any>([]);
+  const { selectedIndex, keyDownHandler } = useKeyNavigation(suggestions, query, setQuery);
 
   useEffect(() => {
     if (suggestionContainerRef.current && suggestionItemRefs.current[selectedIndex]) {
@@ -25,17 +27,6 @@ const SearchBar = () => {
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setQuery(suggestions[selectedIndex] || query);
-  };
-
-  const keyDownHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'ArrowUp') {
-      setSelectedIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : suggestions.length - 1));
-    } else if (e.key === 'ArrowDown') {
-      setSelectedIndex((prevIndex) => (prevIndex < suggestions.length - 1 ? prevIndex + 1 : 0));
-    } else if (e.key === 'Enter') {
-      e.preventDefault();
-      setQuery(suggestions[selectedIndex] || query);
-    }
   };
 
   return (
