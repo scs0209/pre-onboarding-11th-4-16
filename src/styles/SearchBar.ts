@@ -24,16 +24,17 @@ export const SearchForm = styled.form`
   display: flex;
   width: 20%;
   justify-content: center;
+  align-items: center;
 `;
 
 export const SearchButton = styled.button`
-  margin-left: -40px;
+  margin-left: -45px;
   background-color: #357ae1;
-  padding: 0 15px 0 15px;
+  padding: 0 10px 0 10px;
+  height: 40px;
   border: none;
   border-left: 1px solid blue;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 50%;
   text-align: center;
   cursor: pointer;
   outline: none;
@@ -47,6 +48,7 @@ export const SuggestionUl = styled.ul`
   overflow-y: scroll;
   font-size: 16px;
   margin-top: 5px;
+  margin-right: -20px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 

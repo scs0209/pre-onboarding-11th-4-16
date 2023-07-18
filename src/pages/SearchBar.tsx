@@ -28,7 +28,7 @@ const SearchBarPage = () => {
           value={query}
           onChange={onChange}
           onKeyDown={keyDownHandler}
-          placeholder="질환명 검색"
+          placeholder="질환명을 입력해 주세요."
         />
         <SearchButton>🔎</SearchButton>
       </SearchForm>
