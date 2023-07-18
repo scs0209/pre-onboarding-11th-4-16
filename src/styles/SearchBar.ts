@@ -34,7 +34,7 @@ export const SearchButton = styled.button`
   outline: none;
 `;
 
-export const SuggestionList = styled.ul`
+export const SuggestionUl = styled.ul`
   width: 20%;
   background-color: white;
   padding: 10px;
