@@ -1,5 +1,11 @@
 # 🌱 프리온보딩 프론트엔드 과제 Week 4 성창수
 
+## 배포 페이지
+
+🎉 배포 링크 👇
+
+https://pre-onboarding-11th-4-16.vercel.app/
+
 ## 프로젝트 소개
 
 - 검색어 추천, 캐싱, 및 만료 기간(expire time) 설정을 포함한 검색 결과를 보여주는 애플리케이션입니다.
@@ -41,12 +47,10 @@ git clone https://github.com/scs0209/pre-onboarding-11th-4-16.git
 cd pre-onboarding-11th-4-16
 ```
 
-**백엔드**
+**백엔드** <br>
 
-```
-cd pre-onboarding-11th-4-16
-cd assignment-api-master
-```
+아래 url 가서 git clone한 후 npm start<br>
+https://github.com/walking-sunset/assignment-api
 
 ---
 
