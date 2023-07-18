@@ -22,7 +22,7 @@ export const SearchInput = styled.input`
 
 export const SearchForm = styled.form`
   display: flex;
-  width: 20%;
+  min-width: 20%;
   justify-content: center;
   align-items: center;
 `;
@@ -42,6 +42,7 @@ export const SearchButton = styled.button`
 
 export const SuggestionUl = styled.ul`
   width: 20%;
+  min-width: 20%;
   background-color: white;
   padding: 10px;
   max-height: 200px;

@@ -15,14 +15,9 @@ const SearchBarPage = () => {
     setQuery(e.target.value);
   };
 
-  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setQuery(suggestions[selectedIndex] || query);
-  };
-
   return (
     <Container>
-      <SearchForm onSubmit={onSubmit}>
+      <SearchForm>
         <SearchInput
           type="text"
           value={query}
