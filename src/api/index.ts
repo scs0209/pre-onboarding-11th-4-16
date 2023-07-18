@@ -38,11 +38,13 @@ const searchData = async (query: string): Promise<string[]> => {
     suggestions = ['검색어 없음'];
   }
 
-  // Save the suggestions to cache
-  cache[query] = {
-    expirationTime: Date.now() + cacheLifetime,
-    data: suggestions,
-  };
+  // Save the suggestions to cache if suggestions have valid data
+  if (suggestions.length > 0 && suggestions[0] !== '검색어 없음') {
+    cache[query] = {
+      expirationTime: Date.now() + cacheLifetime,
+      data: suggestions,
+    };
+  }
 
   return suggestions;
 };
