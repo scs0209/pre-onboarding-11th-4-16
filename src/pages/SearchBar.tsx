@@ -4,9 +4,9 @@ import { useDataContext } from '@/context/DataContext';
 import { useKeyNavigation } from '@/hooks/useKeyNavigation';
 import { Container, SearchButton, SearchForm, SearchInput } from '@/styles/SearchBar';
 
-import SuggestionList from './SuggestinoList';
+import SuggestionList from '../components/SearchBar/SuggestinoList';
 
-const SearchBar = () => {
+const SearchBarPage = () => {
   const { suggestions, query, setQuery } = useDataContext();
 
   const { selectedIndex, keyDownHandler } = useKeyNavigation(suggestions, query, setQuery);
@@ -32,9 +32,11 @@ const SearchBar = () => {
         />
         <SearchButton>🔎</SearchButton>
       </SearchForm>
-      <SuggestionList suggestions={suggestions} selectedIndex={selectedIndex} />
+      {query.trim() !== '' && (
+        <SuggestionList suggestions={suggestions} selectedIndex={selectedIndex} />
+      )}
     </Container>
   );
 };
 
-export default SearchBar;
+export default SearchBarPage;

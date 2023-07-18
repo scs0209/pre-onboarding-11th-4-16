@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import SearchBar from '@/components/SearchBar/SearchBar';
+import SearchBar from '@/pages/SearchBar';
 
 import { DataProvider } from './context/DataContext';
 
