@@ -28,8 +28,13 @@ export const SearchForm = styled.form`
 
 export const SearchButton = styled.button`
   margin-left: -40px;
-  background-color: transparent;
+  background-color: #357ae1;
+  padding: 0 15px 0 15px;
   border: none;
+  border-left: 1px solid blue;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  text-align: center;
   cursor: pointer;
   outline: none;
 `;
