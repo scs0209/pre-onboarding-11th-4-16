@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent } from 'react';
+import { ChangeEvent } from 'react';
 
 import { useDataContext } from '@/context/DataContext';
 import { useKeyNavigation } from '@/hooks/useKeyNavigation';
