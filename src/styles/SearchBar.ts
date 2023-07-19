@@ -5,14 +5,20 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  background-color: #1c2331;
+  height: 50vh;
+  background-color: #cae9fe;
+`;
+
+export const Title = styled.h2`
+  font-size: 2.125rem;
+  font-weight: 700;
+  text-align: center;
 `;
 
 export const SearchInput = styled.input`
   width: 100%;
-  padding: 14px;
-  font-size: 18px;
+  padding: 18px;
+  font-size: 1rem;
   border: none;
   outline: none;
   background-color: #f5f5f5;
