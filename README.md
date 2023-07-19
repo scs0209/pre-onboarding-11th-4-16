@@ -14,6 +14,10 @@ https://pre-onboarding-11th-4-16.vercel.app/
 
 - 2023.07.16 ~ 2023.07.19
 
+## 데모
+
+![React App - Chrome 2023-07-19 15-58-57](https://github.com/scs0209/pre-onboarding-11th-4-16/assets/110822847/983b280d-25f3-4e83-8b13-022fecd68bd8)
+
 ## 😊 개발자 소개
 
 |                                                            성창수                                                            |
@@ -31,38 +35,27 @@ https://pre-onboarding-11th-4-16.vercel.app/
 
 ## 🔧 설치 및 실행
 
-**깃 클론**
+**프론트**
 
 ```
 git clone https://github.com/scs0209/pre-onboarding-11th-4-16.git
-```
 
----
-
-**프로젝트 디렉토리 이동**
-
-**프론트엔드**
-
-```
 cd pre-onboarding-11th-4-16
-```
 
-**백엔드** <br>
-
-아래 url 가서 git clone한 후 npm start<br>
-https://github.com/walking-sunset/assignment-api
-
----
-
-**필요한 패키지 설치**
-
-```
 npm install
+
+npm start
 ```
 
-**프로젝트를 실행**
+**백엔드**
 
 ```
+git clone https://github.com/walking-sunset/assignment-api.git
+
+cd assignment-api
+
+npm install
+
 npm start
 ```
 
